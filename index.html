@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/3D_Print_Shop_Web/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Browse & book custom 3D printed models and toys!">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="3D Print Shop">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png?v=1792777140">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png?v=1792777140"/>
+
+  <title>3D Print Shop</title>
+  <link rel="manifest" href="manifest.json?v=1792777140">
+  <script>
+    window._deferredPwaPrompt = null;
+    window.addEventListener('beforeinstallprompt', function(e) {
+      e.preventDefault();
+      window._deferredPwaPrompt = e;
+    });
+    window.addEventListener('appinstalled', function() {
+      window._deferredPwaPrompt = null;
+    });
+  </script>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <script>
+    // Auto-escape LINE in-app browser so WebRTC Live Camera works in Chrome/Safari
+    (function() {
+      var ua = navigator.userAgent || '';
+      if (/Line\//i.test(ua) && window.location.search.indexOf('openExternalBrowser=1') === -1) {
+        var sep = window.location.href.indexOf('?') === -1 ? '?' : '&';
+        window.location.replace(window.location.href + sep + 'openExternalBrowser=1');
+      }
+    })();
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('flutter_service_worker.js?v=1792777140').then(function(reg) {
+        reg.update();
+      });
+    }
+  </script>
+</head>
+<body>
+  <script src="flutter_bootstrap.js?v=1792777140" async></script>
+</body>
+</html>
