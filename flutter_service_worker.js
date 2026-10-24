@@ -1,4 +1,4 @@
-// Network-first PWA Service Worker v=1792808327
+// Network-first PWA Service Worker v=1792811930
 self.addEventListener('install', function(e) {
   self.skipWaiting();
 });
